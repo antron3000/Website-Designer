@@ -59,28 +59,48 @@ export default function Home() {
         <div className="mx-auto max-w-[1200px]">
           <p className="mb-16 text-center text-[10px] uppercase tracking-widest text-gray-300">{c.work.label}</p>
           <div className="grid gap-4 md:grid-cols-2">
-            <div className="aspect-[4/5] bg-gray-900 p-8 flex flex-col justify-end">
-              <h3 className="text-xl font-semibold tracking-tight text-white">{c.work.w1.title}</h3>
-              <p className="mt-2 text-xs text-gray-500">{c.work.w1.sub}</p>
-            </div>
-            <div className="aspect-[4/5] bg-[#e8e4df] p-8 flex flex-col justify-end">
-              <h3 className="text-xl font-semibold tracking-tight text-gray-900">{c.work.w2.title}</h3>
-              <p className="mt-2 text-xs text-gray-500">{c.work.w2.sub}</p>
-            </div>
+            <a href="https://devcash.dev" target="_blank" rel="noopener noreferrer" className="group relative aspect-[4/5] overflow-hidden bg-gray-900">
+              <Image src="/screenshots/devcash.jpg" alt="DevCash" fill className="object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="relative flex h-full flex-col justify-end p-8">
+                <h3 className="text-xl font-semibold tracking-tight text-white">{c.work.w1.title}</h3>
+                <p className="mt-2 text-xs text-white/60">{c.work.w1.sub}</p>
+              </div>
+            </a>
+            <a href="https://degent.club" target="_blank" rel="noopener noreferrer" className="group relative aspect-[4/5] overflow-hidden bg-gray-900">
+              <Image src="/screenshots/degent.jpg" alt="Degent Club" fill className="object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="relative flex h-full flex-col justify-end p-8">
+                <h3 className="text-xl font-semibold tracking-tight text-white">{c.work.w2.title}</h3>
+                <p className="mt-2 text-xs text-white/60">{c.work.w2.sub}</p>
+              </div>
+            </a>
           </div>
           <div className="mt-4 grid gap-4 md:grid-cols-3">
-            <div className="aspect-square bg-[#d42b2b] p-8 flex flex-col justify-end">
-              <h3 className="text-lg font-semibold tracking-tight text-white">{c.work.w3.title}</h3>
-              <p className="mt-2 text-xs text-white/50">{c.work.w3.sub}</p>
-            </div>
-            <div className="aspect-square bg-gray-200 p-8 flex flex-col justify-end">
-              <h3 className="text-lg font-semibold tracking-tight text-gray-900">{c.work.w4.title}</h3>
-              <p className="mt-2 text-xs text-gray-500">{c.work.w4.sub}</p>
-            </div>
-            <div className="aspect-square bg-gray-900 p-8 flex flex-col justify-end">
-              <h3 className="text-lg font-semibold tracking-tight text-white">{c.work.w5.title}</h3>
-              <p className="mt-2 text-xs text-gray-500">{c.work.w5.sub}</p>
-            </div>
+            <a href="https://maisonsukoh.com" target="_blank" rel="noopener noreferrer" className="group relative aspect-square overflow-hidden bg-gray-900">
+              <Image src="/screenshots/maisonsukoh.jpg" alt="Maison Sukoh" fill className="object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="relative flex h-full flex-col justify-end p-8">
+                <h3 className="text-lg font-semibold tracking-tight text-white">{c.work.w3.title}</h3>
+                <p className="mt-2 text-xs text-white/60">{c.work.w3.sub}</p>
+              </div>
+            </a>
+            <a href="https://bitcoincay.ca" target="_blank" rel="noopener noreferrer" className="group relative aspect-square overflow-hidden bg-gray-900">
+              <Image src="/screenshots/bitcoincay.jpg" alt="Bitcoin Cay" fill className="object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="relative flex h-full flex-col justify-end p-8">
+                <h3 className="text-lg font-semibold tracking-tight text-white">{c.work.w4.title}</h3>
+                <p className="mt-2 text-xs text-white/60">{c.work.w4.sub}</p>
+              </div>
+            </a>
+            <a href="https://block.space" target="_blank" rel="noopener noreferrer" className="group relative aspect-square overflow-hidden bg-gray-900">
+              <Image src="/screenshots/blockspace.jpg" alt="Block.Space" fill className="object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="relative flex h-full flex-col justify-end p-8">
+                <h3 className="text-lg font-semibold tracking-tight text-white">{c.work.w5.title}</h3>
+                <p className="mt-2 text-xs text-white/60">{c.work.w5.sub}</p>
+              </div>
+            </a>
           </div>
         </div>
       </section>

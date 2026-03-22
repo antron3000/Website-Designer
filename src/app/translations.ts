@@ -12,11 +12,11 @@ export const t = {
     work: {
       label: "Selected work",
       heading: "Portfolio",
-      w1: { title: "E-Commerce Platform", sub: "Design & Development", desc: "A fully custom e-commerce experience built for scale. From product pages to checkout, every detail designed for conversion." },
-      w2: { title: "Brand Identity", sub: "Strategy & Visual Design", desc: "A complete brand overhaul — logo, type system, color palette, and guidelines that unify every touchpoint." },
-      w3: { title: "SaaS Dashboard", sub: "Product Design", desc: "An intuitive analytics dashboard that turns complex data into clear, actionable insights." },
-      w4: { title: "Marketing Site", sub: "Web Development", desc: "A high-performance marketing site built to convert visitors into customers." },
-      w5: { title: "AI Integration", sub: "Telegram & OpenClaw", desc: "A seamless AI website manager integration — letting clients manage their site through natural conversation." },
+      w1: { title: "DevCash", sub: "devcash.dev", desc: "A developer-focused platform built for speed and clarity. Clean interface, powerful tooling." },
+      w2: { title: "Degent Club", sub: "degent.club", desc: "A bold community hub with a distinct identity. Designed to stand out and drive engagement." },
+      w3: { title: "Maison Sukoh", sub: "maisonsukoh.com", desc: "An elegant brand experience for a luxury label. Refined visuals, seamless e-commerce." },
+      w4: { title: "Bitcoin Cay", sub: "bitcoincay.ca", desc: "A modern crypto-forward site built for trust and performance. Clear messaging, sharp design." },
+      w5: { title: "Block.Space", sub: "block.space", desc: "A cutting-edge web3 platform. Minimal design paired with powerful blockchain integration." },
     },
     about: {
       label: "About",
@@ -56,11 +56,11 @@ export const t = {
     work: {
       label: "Projets sélectionnés",
       heading: "Portfolio",
-      w1: { title: "Plateforme E-Commerce", sub: "Design & Développement", desc: "Une expérience e-commerce entièrement sur mesure, conçue pour la croissance. Chaque détail pensé pour la conversion." },
-      w2: { title: "Identité de marque", sub: "Stratégie & Design visuel", desc: "Une refonte complète de marque — logo, typographie, palette de couleurs et directives unifiant chaque point de contact." },
-      w3: { title: "Tableau de bord SaaS", sub: "Design produit", desc: "Un tableau de bord analytique intuitif qui transforme des données complexes en informations claires et exploitables." },
-      w4: { title: "Site marketing", sub: "Développement web", desc: "Un site marketing performant conçu pour convertir les visiteurs en clients." },
-      w5: { title: "Intégration IA", sub: "Telegram & OpenClaw", desc: "Une intégration fluide de gestionnaire IA — permettant aux clients de gérer leur site par conversation naturelle." },
+      w1: { title: "DevCash", sub: "devcash.dev", desc: "Une plateforme axée développeurs, conçue pour la vitesse et la clarté. Interface épurée, outils puissants." },
+      w2: { title: "Degent Club", sub: "degent.club", desc: "Un hub communautaire audacieux avec une identité distincte. Conçu pour se démarquer et stimuler l'engagement." },
+      w3: { title: "Maison Sukoh", sub: "maisonsukoh.com", desc: "Une expérience de marque élégante pour un label de luxe. Visuels raffinés, e-commerce fluide." },
+      w4: { title: "Bitcoin Cay", sub: "bitcoincay.ca", desc: "Un site crypto moderne conçu pour la confiance et la performance. Message clair, design percutant." },
+      w5: { title: "Block.Space", sub: "block.space", desc: "Une plateforme web3 de pointe. Design minimaliste allié à une intégration blockchain puissante." },
     },
     about: {
       label: "À propos",

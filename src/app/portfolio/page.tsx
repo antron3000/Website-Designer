@@ -1,24 +1,26 @@
 "use client";
 
+import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import { useLang } from "../components/LangContext";
 import { t } from "../translations";
 
-const colors = [
-  "bg-gray-900",
-  "bg-[#e8e4df]",
-  "bg-[#d42b2b]",
-  "bg-gray-200",
-  "bg-gray-900",
+const screenshots = [
+  "/screenshots/devcash.jpg",
+  "/screenshots/degent.jpg",
+  "/screenshots/maisonsukoh.jpg",
+  "/screenshots/bitcoincay.jpg",
+  "/screenshots/blockspace.jpg",
 ];
 
-const textColors = [
-  { title: "text-white", sub: "text-gray-500" },
-  { title: "text-gray-900", sub: "text-gray-500" },
-  { title: "text-white", sub: "text-white/50" },
-  { title: "text-gray-900", sub: "text-gray-500" },
-  { title: "text-white", sub: "text-gray-500" },
+const urls = [
+  "https://devcash.dev",
+  "https://degent.club",
+  "https://maisonsukoh.com",
+  "https://bitcoincay.ca",
+  "https://block.space",
 ];
 
 export default function PortfolioPage() {
@@ -39,10 +41,12 @@ export default function PortfolioPage() {
             {c.work.label}
           </p>
 
-          <div className="mt-20 grid gap-16">
+          <div className="mt-20 grid gap-20">
             {works.map((w, i) => (
               <div key={i} className="grid items-start gap-8 md:grid-cols-2">
-                <div className={`aspect-[4/3] ${colors[i]} rounded-sm`} />
+                <a href={urls[i]} target="_blank" rel="noopener noreferrer" className="group relative aspect-[4/3] overflow-hidden bg-gray-100">
+                  <Image src={screenshots[i]} alt={w.title} fill className="object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                </a>
                 <div className="flex flex-col justify-center">
                   <p className="mb-4 text-[10px] uppercase tracking-widest text-gray-300">
                     {String(i + 1).padStart(2, "0")}
@@ -56,6 +60,9 @@ export default function PortfolioPage() {
                   <p className="mt-2 text-sm leading-relaxed text-gray-400">
                     {w.desc}
                   </p>
+                  <a href={urls[i]} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-wider text-gray-900 transition-colors hover:text-gray-500">
+                    Visit site <ArrowUpRight className="h-3.5 w-3.5" />
+                  </a>
                 </div>
               </div>
             ))}
