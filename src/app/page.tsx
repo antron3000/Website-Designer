@@ -1,65 +1,131 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import { useLang } from "./components/LangContext";
+import { t } from "./translations";
 
 export default function Home() {
+  const { lang } = useLang();
+  const c = t[lang];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div className="min-h-screen bg-[#f9f8f6]">
+      <Nav />
+
+      {/* ── Hero ── */}
+      <section className="px-6 pt-16 pb-32 md:px-12 md:pt-24 md:pb-40 lg:px-20">
+        <div className="mx-auto max-w-[1200px]">
+          <div className="animate-fade-in-up mt-8 flex justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-gray-900 transition-colors hover:text-gray-500"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+              {c.hero.cta} <ArrowUpRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Services ── */}
+      <section className="px-6 pb-32 md:px-12 lg:px-20">
+        <div className="mx-auto max-w-[1200px]">
+          <p className="mb-16 text-center text-[10px] uppercase tracking-widest text-gray-300">{c.services.label}</p>
+          <div className="grid gap-y-16 gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
+            <div>
+              <p className="mb-4 text-[10px] uppercase tracking-widest text-gray-300">01</p>
+              <h3 className="mb-3 text-lg font-semibold tracking-tight text-gray-900">{c.services.s1.title}</h3>
+              <p className="text-sm leading-relaxed text-gray-400">{c.services.s1.desc}</p>
+            </div>
+            <div>
+              <p className="mb-4 text-[10px] uppercase tracking-widest text-gray-300">02</p>
+              <h3 className="mb-3 text-lg font-semibold tracking-tight text-gray-900">{c.services.s2.title}</h3>
+              <p className="text-sm leading-relaxed text-gray-400">{c.services.s2.desc}</p>
+            </div>
+            <div>
+              <p className="mb-4 text-[10px] uppercase tracking-widest text-gray-300">03</p>
+              <h3 className="mb-3 text-lg font-semibold tracking-tight text-gray-900">{c.services.s3.title}</h3>
+              <p className="text-sm leading-relaxed text-gray-400">{c.services.s3.desc}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Work Grid ── */}
+      <section className="px-6 pb-32 md:px-12 lg:px-20">
+        <div className="mx-auto max-w-[1200px]">
+          <p className="mb-16 text-center text-[10px] uppercase tracking-widest text-gray-300">{c.work.label}</p>
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="aspect-[4/5] bg-gray-900 p-8 flex flex-col justify-end">
+              <h3 className="text-xl font-semibold tracking-tight text-white">{c.work.w1.title}</h3>
+              <p className="mt-2 text-xs text-gray-500">{c.work.w1.sub}</p>
+            </div>
+            <div className="aspect-[4/5] bg-[#e8e4df] p-8 flex flex-col justify-end">
+              <h3 className="text-xl font-semibold tracking-tight text-gray-900">{c.work.w2.title}</h3>
+              <p className="mt-2 text-xs text-gray-500">{c.work.w2.sub}</p>
+            </div>
+          </div>
+          <div className="mt-4 grid gap-4 md:grid-cols-3">
+            <div className="aspect-square bg-[#d42b2b] p-8 flex flex-col justify-end">
+              <h3 className="text-lg font-semibold tracking-tight text-white">{c.work.w3.title}</h3>
+              <p className="mt-2 text-xs text-white/50">{c.work.w3.sub}</p>
+            </div>
+            <div className="aspect-square bg-gray-200 p-8 flex flex-col justify-end">
+              <h3 className="text-lg font-semibold tracking-tight text-gray-900">{c.work.w4.title}</h3>
+              <p className="mt-2 text-xs text-gray-500">{c.work.w4.sub}</p>
+            </div>
+            <div className="aspect-square bg-gray-900 p-8 flex flex-col justify-end">
+              <h3 className="text-lg font-semibold tracking-tight text-white">{c.work.w5.title}</h3>
+              <p className="mt-2 text-xs text-gray-500">{c.work.w5.sub}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── About ── */}
+      <section className="px-6 pb-32 md:px-12 lg:px-20">
+        <div className="mx-auto max-w-[800px] text-center">
+          <p className="mb-10 text-[10px] uppercase tracking-widest text-gray-300">{c.about.label}</p>
+          <p className="text-2xl font-semibold leading-snug tracking-tight text-gray-900 sm:text-3xl">
+            {c.about.text}
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* ── Team ── */}
+      <section className="px-6 pb-32 md:px-12 lg:px-20">
+        <div className="mx-auto max-w-[1200px]">
+          <p className="mb-16 text-center text-[10px] uppercase tracking-widest text-gray-300">{c.team.label}</p>
+          <div className="grid gap-12 sm:grid-cols-2 md:gap-16 max-w-[700px] mx-auto">
+            {c.team.members.map((member, i) => (
+              <div key={i} className="text-center">
+                <div className="mx-auto mb-6 aspect-[3/4] w-full max-w-[280px] overflow-hidden bg-gray-200">
+                  {member.image ? (
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      width={280}
+                      height={373}
+                      className="h-full w-full object-cover"
+                    />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center text-[10px] uppercase tracking-widest text-gray-400">
+                      Photo
+                    </div>
+                  )}
+                </div>
+                <h3 className="text-lg font-semibold tracking-tight text-gray-900">{member.name}</h3>
+                <p className="mt-1 text-xs uppercase tracking-wider text-gray-400">{member.role}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
+      </section>
+
+      <Footer />
     </div>
   );
 }
